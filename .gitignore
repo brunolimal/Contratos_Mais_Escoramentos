@@ -26,3 +26,4 @@ dist-ssr
 =======
 node_modules
 >>>>>>> a526687db7683d9ebf2c355621e1a42e3a1fd3b9
+.vercel
