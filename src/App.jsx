@@ -983,8 +983,8 @@ export default function App() {
           </div>
 
           {/* Coluna Direita: Tabela de Equipamentos */}
-          <div className="xl:col-span-3 h-[calc(100vh-140px)] min-h-[600px]">
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 h-full flex flex-col overflow-hidden">
+            <div className="xl:col-span-3">
+            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col">
               <div className="p-5 border-b border-slate-100 flex justify-between items-center bg-slate-50">
                 <h2 className="text-base font-bold text-slate-800 flex items-center gap-2">
                   <ListChecks className="text-blue-500" size={20} />
@@ -1028,7 +1028,7 @@ export default function App() {
                   </button>
                 </div>
               ) : (
-                <div className="overflow-x-auto overflow-y-auto flex-1 custom-scrollbar">
+                <div className="overflow-x-auto flex-1 custom-scrollbar">
                   <table className="w-full text-sm text-left text-slate-600 whitespace-nowrap">
                     <thead className="text-[11px] text-slate-500 uppercase bg-white sticky top-0 z-10 shadow-sm ring-1 ring-slate-100">
                       <tr>
