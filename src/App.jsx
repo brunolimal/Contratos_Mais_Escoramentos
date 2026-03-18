@@ -709,7 +709,7 @@ export default function App() {
                     <div className="relative group">
                       <img
                         src={companyLogo}
-                        alt="Logo Atual"
+                        alt="Logo Actual"
                         className="h-16 w-auto object-contain border border-slate-200 rounded p-1"
                       />
                       <button
@@ -791,8 +791,8 @@ export default function App() {
         </div>
       )}
 
-      {/* Conteúdo Principal */}
-      <main className="max-w-[1400px] mx-auto px-4 md:px-8 py-8">
+      {/* Conteúdo Principal - Alterado para max-w-full */}
+      <main className="max-w-full mx-auto px-4 md:px-8 py-8">
         {error && (
           <div className="mb-6 bg-red-50 text-red-700 p-4 rounded-xl flex items-center gap-2 border border-red-200 shadow-sm animate-in slide-in-from-top-2">
             <AlertCircle size={20} />
@@ -982,8 +982,8 @@ export default function App() {
             </div>
           </div>
 
-          {/* Coluna Direita: Tabela de Equipamentos */}
-            <div className="xl:col-span-3">
+          {/* Coluna Direita: Tabela de Equipamentos - Removido a trava de altura */}
+          <div className="xl:col-span-3">
             <div className="bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col">
               <div className="p-5 border-b border-slate-100 flex justify-between items-center bg-slate-50">
                 <h2 className="text-base font-bold text-slate-800 flex items-center gap-2">
@@ -1029,7 +1029,8 @@ export default function App() {
                 </div>
               ) : (
                 <div className="overflow-x-auto flex-1 custom-scrollbar">
-                  <table className="w-full text-sm text-left text-slate-600 whitespace-nowrap">
+                  {/* Tabela com min-width para evitar corte */}
+                  <table className="min-w-[1200px] w-full text-sm text-left text-slate-600 whitespace-nowrap">
                     <thead className="text-[11px] text-slate-500 uppercase bg-white sticky top-0 z-10 shadow-sm ring-1 ring-slate-100">
                       <tr>
                         <th className="px-3 py-3 w-8 text-center">Inc.</th>
@@ -1043,13 +1044,14 @@ export default function App() {
                         <th className="px-3 py-3 text-right font-bold text-blue-700">
                           Locação/Dia
                         </th>
-                        <th className="px-3 py-3 text-right text-slate-400">
+                        {/* Colunas Indenização com largura fixa */}
+                        <th className="px-3 py-3 text-right text-slate-400 w-24">
                           Ind. G1
                         </th>
-                        <th className="px-3 py-3 text-right text-slate-400">
+                        <th className="px-3 py-3 text-right text-slate-400 w-24">
                           Ind. G2
                         </th>
-                        <th className="px-3 py-3 text-right text-slate-400">
+                        <th className="px-3 py-3 text-right text-slate-400 w-24">
                           Ind. G3
                         </th>
                       </tr>
